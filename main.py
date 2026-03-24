@@ -3,10 +3,11 @@ def clean_heartrate_data(data: list) -> tuple:
     Clean raw heart-rate data by removing malformed or impossible values.
     """
     for e in data:
-        e.strip()
-        # identified what you did: I removed the whitespace from the "e" iterator,
-        # but now I'm not sure what to do with this variable, how can I "clean" it up?
-        # what is a malformed data file?
+        # check if "e" is an empty string
+        if e != "":
+            # type cast val into an int
+            new_val = int(e.strip())
+            print(new_val)
 
     return e
 
